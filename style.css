@@ -13,6 +13,17 @@ nav li a {
     text-decoration: none;
 }
 
+/* Buttons  */
+.book-top {
+    margin: 2rem 2rem 0; 
+}
+
+.book-top, 
+.book-bottom {
+    padding: 1rem 5rem 1rem 2rem;  
+    border-radius: 20px; 
+}
+
 /* Page Sections */
 .sectionOne {
    background-color: darkgrey; 
@@ -23,13 +34,6 @@ nav li a {
 .sectionOne h1 {
     padding-top: 8rem; 
     margin: 0 2rem; 
-}
-
-.sectionOne button {
-    margin: 0 2rem; 
-    margin-top: 2rem;
-    padding: 1rem 5rem 1rem 2rem;  
-    border-radius: 20px; 
 }
 
 .sectionTwo {
@@ -65,9 +69,33 @@ nav li a {
     margin: 1rem; 
 }
 
+.sectionThree {
+    background-color: grey; 
+   
+    margin-bottom: 0;
+    margin-top: 3rem; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center; 
+    align-items: baseline; 
+}
+
+.sectionThree h2 {
+   
+    padding: 1rem 1rem 0; 
+}
+
+.book-bottom {
+    height: 3.375rem; 
+    margin-bottom: 1rem; 
+    
+}
+
+
 footer {
     background-color: darkgrey; 
-    margin-top: 3rem; 
+    margin-top: 0; 
     padding: 1.3rem;
     text-align: center; 
 }
@@ -77,6 +105,11 @@ footer {
     .event-type-container {
         display: flex; 
         margin: 2em; 
+    }
+
+    .sectionThree {
+        padding: 2.4rem; 
+        justify-content: space-around;
     }
 }
 
@@ -90,6 +123,9 @@ footer {
         margin-right: auto; 
     }
 
+    .sectionThree h2 {
+        padding: 1rem 5rem 1rem 3rem;  
+    }
    
 
 }
