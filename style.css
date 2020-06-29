@@ -1,0 +1,95 @@
+/* Navigation Things */
+
+
+
+.nav-li {
+    list-style-type: none;
+    font-size: 1.2rem; 
+    margin-right: 3rem; 
+   
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+/* Page Sections */
+.sectionOne {
+   background-color: darkgrey; 
+    /* background: url(images/kidsplaying.jpg) no-repeat; */
+    height: 320px; 
+}
+
+.sectionOne h1 {
+    padding-top: 8rem; 
+    margin: 0 2rem; 
+}
+
+.sectionOne button {
+    margin: 0 2rem; 
+    margin-top: 2rem;
+    padding: 1rem 5rem 1rem 2rem;  
+    border-radius: 20px; 
+}
+
+.sectionTwo {
+    margin: 4rem 2rem; 
+}
+
+.event-type-container {
+    margin: 2erm; 
+}
+
+.event-type {
+    margin: 1rem 1rem 3rem; 
+}
+
+.event-type img {
+    display: block; 
+    margin: 0 auto 2rem; 
+}
+
+.event-type hr {
+    margin-top: 1.8rem; 
+    width: 150px; 
+}
+
+.sectionVideos {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+.responsive-video {
+    min-width: 20%; 
+    margin: 1rem; 
+}
+
+footer {
+    background-color: darkgrey; 
+    margin-top: 3rem; 
+    padding: 1.3rem;
+    text-align: center; 
+}
+
+/* Media Queries */
+@media (min-width: 880px) {
+    .event-type-container {
+        display: flex; 
+        margin: 2em; 
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-ul {
+        display: flex; 
+        align-items: center; 
+    }
+
+    .first-nav-item {
+        margin-right: auto; 
+    }
+
+   
+
+}
