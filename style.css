@@ -14,6 +14,9 @@ nav li a {
 
 .nav-pages {
     display: none; 
+    padding: .8rem; 
+    text-align: center;
+    /* border: 1px solid red; */
 }
 
 /* Buttons  */
@@ -35,13 +38,17 @@ nav li a {
 header {
     display: flex; 
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* background-color: white; 
+    position: fixed; 
+    width: 100%; */
 }
 
 .sectionOne {
    background-color: darkgrey; 
     /* background: url(images/kidsplaying.jpg) no-repeat; */
     /* height: 320px;  */
+  
 }
 
 .sectionOne h1 {
