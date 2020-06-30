@@ -30,9 +30,9 @@ nav li a {
     border-radius: 20px; 
 }
 
-.hamburger {
+/* .hamburger {
     margin-right: 1rem; 
-}
+} */
 
 /* Page Sections */
 header {
@@ -145,6 +145,7 @@ footer {
 
     .nav-pages {
         display: block; 
+        margin-right: 2rem; 
     }
 
     .hamburger {
