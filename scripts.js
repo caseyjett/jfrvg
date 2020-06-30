@@ -9,7 +9,7 @@
     // Do something else, like open/close menu
     let menu = document.getElementsByClassName("nav-pages");
     for (let i = 0; i < menu.length; i++) {
-    if (hamburger.classList.contains("is-active") && menu[i].style.display === "none") {
+    if (hamburger.classList.contains("is-active")) {
       menu[i].style.display = "block"; 
     } else {
       menu[i].style.display = "none"; 
