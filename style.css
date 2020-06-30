@@ -1,6 +1,5 @@
+
 /* Navigation Things */
-
-
 
 .nav-li {
     list-style-type: none;
@@ -13,9 +12,13 @@ nav li a {
     text-decoration: none;
 }
 
+.nav-pages {
+    display: none; 
+}
+
 /* Buttons  */
 .book-top {
-    margin: 2rem 2rem 0; 
+    margin: 2rem; 
 }
 
 .book-top, 
@@ -24,11 +27,21 @@ nav li a {
     border-radius: 20px; 
 }
 
+.hamburger {
+    margin-right: 1rem; 
+}
+
 /* Page Sections */
+header {
+    display: flex; 
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
 .sectionOne {
    background-color: darkgrey; 
     /* background: url(images/kidsplaying.jpg) no-repeat; */
-    height: 320px; 
+    /* height: 320px;  */
 }
 
 .sectionOne h1 {
@@ -66,7 +79,7 @@ nav li a {
 
 .responsive-video {
     min-width: 20%; 
-    margin: 1rem; 
+    margin: .8rem; 
 }
 
 .sectionThree {
@@ -123,9 +136,23 @@ footer {
         margin-right: auto; 
     }
 
+    .nav-pages {
+        display: block; 
+    }
+
+    .hamburger {
+        display: none; 
+    }
+
+    header {
+        display: block; 
+    }
+
     .sectionThree h2 {
         padding: 1rem 5rem 1rem 3rem;  
     }
    
 
 }
+
+
