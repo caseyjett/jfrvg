@@ -1,27 +1,109 @@
+/* Hamburger Styles */
+.hamburger {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; }
+    .hamburger:hover {
+      opacity: 0.7; }
+    .hamburger.is-active:hover {
+      opacity: 0.7; }
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+      background-color: #000; }
+  
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative; }
+  
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      width: 40px;
+      height: 4px;
+      background-color: #000;
+      border-radius: 4px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease; }
+    .hamburger-inner::before, .hamburger-inner::after {
+      content: "";
+      display: block; }
+    .hamburger-inner::before {
+      top: -10px; }
+    .hamburger-inner::after {
+      bottom: -10px; }
+
+      .hamburger--squeeze .hamburger-inner {
+        transition-duration: 0.075s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+        .hamburger--squeeze .hamburger-inner::before {
+          transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+        .hamburger--squeeze .hamburger-inner::after {
+          transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+      
+      .hamburger--squeeze.is-active .hamburger-inner {
+        transform: rotate(45deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+        .hamburger--squeeze.is-active .hamburger-inner::before {
+          top: 0;
+          opacity: 0;
+          transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+        .hamburger--squeeze.is-active .hamburger-inner::after {
+          bottom: 0;
+          transform: rotate(-90deg);
+          transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+      
+
+:root {
+    --kyblue: #0033A0; 
+    --yellow: #ffd204; 
+    --red: #e51b24; 
+}
 
 /* Navigation Things */
-
-
 .nav-li {
     list-style-type: none;
-    font-size: 1.2rem; 
-   
+    font-size: 1.2rem;   
 }
 
 nav li a {
     text-decoration: none;
+    color: var(--kyblue); 
 }
 
 .nav-pages {
     display: none; 
     padding: .8rem; 
     text-align: center;
-    /* border: 1px solid red; */
 }
 
 /* Buttons  */
 .book-top {
-    margin: 2rem; 
+  margin-bottom: 2rem; 
+   position: absolute; 
+ 
+
 }
 
 .book-top, 
@@ -29,10 +111,6 @@ nav li a {
     padding: 1rem 5rem 1rem 2rem;  
     border-radius: 20px; 
 }
-
-/* .hamburger {
-    margin-right: 1rem; 
-} */
 
 /* Page Sections */
 header {
@@ -45,15 +123,22 @@ header {
 }
 
 .sectionOne {
-   background-color: darkgrey; 
-    /* background: url(images/kidsplaying.jpg) no-repeat; */
-    /* height: 320px;  */
-  
+    /* background-color: darkgrey;  */
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url(images/kidsGaming.jpg);  
+    /* background: darkgrey url(images/kidsplaying.jpg) left center/cover no-repeat;  */
+    background-position: left 40%; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 420px; 
 }
 
 .sectionOne h1 {
-    padding-top: 8rem; 
-    margin: 0 2rem; 
+    padding-top: 14rem; 
+    margin-right: 1rem; 
+    margin-top: 0; 
+    text-align: left; 
+    letter-spacing: .09rem;
 }
 
 .sectionTwo {
@@ -70,12 +155,30 @@ header {
 
 .event-type img {
     display: block; 
-    margin: 0 auto 2rem; 
+    margin: 0 auto 2rem;  
+    border-radius: 25px; 
+}
+
+.corporate {
+    width: 150px;
+    height: 150px;  
+}
+
+.classroom, 
+.gamerGirls, 
+.gamerBoys {
+    height: 150px; 
+
 }
 
 .event-type hr {
     margin-top: 1.8rem; 
     width: 150px; 
+  
+}
+
+.event-type p {
+    text-align: center; 
 }
 
 .sectionVideos {
@@ -114,7 +217,8 @@ header {
 
 
 footer {
-    background-color: darkgrey; 
+    background-color: var(--kyblue); 
+    color: white; 
     margin-top: 0; 
     padding: 1.3rem;
     text-align: center; 
@@ -122,9 +226,23 @@ footer {
 
 /* Media Queries */
 @media (min-width: 880px) {
+    .sectionOne h1 {
+        margin-right: 4rem; 
+        text-align: right; 
+    }
+
+    .book-top {
+        right: 4rem; 
+        left: auto; 
+    }
+
     .event-type-container {
         display: flex; 
         margin: 2em; 
+    }
+
+    .event-type {
+        flex-basis: 24%; 
     }
 
     .sectionThree {
@@ -144,7 +262,7 @@ footer {
     }
 
     .nav-pages {
-        display: block; 
+        display: block !important; 
         margin-right: 2rem; 
     }
 
@@ -155,6 +273,8 @@ footer {
     header {
         display: block; 
     }
+
+
 
     .sectionThree h2 {
         padding: 1rem 5rem 1rem 3rem;  
