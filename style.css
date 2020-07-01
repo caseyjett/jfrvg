@@ -76,7 +76,7 @@
       
 
 :root {
-    --kyblue: #0033A0; 
+    --kyblue: #223a81; 
     --yellow: #ffd204; 
     --red: #e51b24; 
 }
@@ -98,53 +98,88 @@ nav li a {
     text-align: center;
 }
 
+.first-nav-item img {
+    height: 80px; 
+}
+
 /* Buttons  */
 .book-top {
-  margin-bottom: 2rem; 
-   position: absolute; 
- 
-
+    margin-bottom: 5rem; 
+    position: absolute; 
 }
 
 .book-top, 
-.book-bottom {
+.book-bottom, 
+.about-btn {
     padding: 1rem 5rem 1rem 2rem;  
     border-radius: 20px; 
 }
 
+.about-btn {
+    /* display: block; 
+    margin: 0 auto;    */
+    height: 54px; 
+}
+
+.about-btn a {
+    text-decoration: none;
+    
+}
 /* Page Sections */
 header {
     display: flex; 
     flex-direction: row-reverse;
     justify-content: space-around;
-    /* background-color: white; 
+    /* 
     position: fixed; 
     width: 100%; */
 }
 
 .sectionOne {
-    /* background-color: darkgrey;  */
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
-    url(images/kidsGaming.jpg);  
+    background-color: var(--kyblue); 
+    /* background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url(images/lituptrailer.jpg);  
     /* background: darkgrey url(images/kidsplaying.jpg) left center/cover no-repeat;  */
-    background-position: left 40%; 
+    /* background-position: left 40%; 
     background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 420px; 
+    background-repeat: no-repeat;   */
+   
+    display: flex; 
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
 }
 
 .sectionOne h1 {
-    padding-top: 14rem; 
-    margin-right: 1rem; 
+    padding-top: 1rem; 
+    margin-right: 4rem; 
     margin-top: 0; 
     text-align: left; 
     letter-spacing: .09rem;
+    color: white; 
+}
+
+.sectionOneImg {
+    height: 490px; 
 }
 
 .sectionTwo {
     margin: 4rem 2rem; 
 }
 
+.sectionTwoDiv {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.about-p {
+    flex-basis: 75%;
+    margin-right: 1rem; 
+}
+
+.divider {
+    margin-bottom: 2rem; 
+}
 .event-type-container {
     margin: 2erm; 
 }
@@ -193,8 +228,8 @@ header {
 }
 
 .sectionThree {
-    background-color: grey; 
-   
+    background-color:var(--red); 
+    color: white; 
     margin-bottom: 0;
     margin-top: 3rem; 
     display: flex; 
@@ -202,6 +237,7 @@ header {
     align-items: center;
     justify-content: center; 
     align-items: baseline; 
+    letter-spacing: .09rem;
 }
 
 .sectionThree h2 {
@@ -209,10 +245,13 @@ header {
     padding: 1rem 1rem 0; 
 }
 
+.final-prompt {
+    flex-basis: 60%; 
+}
 .book-bottom {
     height: 3.375rem; 
     margin-bottom: 1rem; 
-    
+    color: black; 
 }
 
 
@@ -226,15 +265,15 @@ footer {
 
 /* Media Queries */
 @media (min-width: 880px) {
-    .sectionOne h1 {
+    /* .sectionOne h1 {
         margin-right: 4rem; 
         text-align: right; 
-    }
+    } */
 
-    .book-top {
+    /* .book-top {
         right: 4rem; 
         left: auto; 
-    }
+    } */
 
     .event-type-container {
         display: flex; 
@@ -259,6 +298,7 @@ footer {
 
     .first-nav-item {
         margin-right: auto; 
+        margin-left: 1rem; 
     }
 
     .nav-pages {
@@ -274,12 +314,15 @@ footer {
         display: block; 
     }
 
-
+    .sectionOne h1 {
+        padding-top: 14rem; 
+    }
 
     .sectionThree h2 {
         padding: 1rem 5rem 1rem 3rem;  
     }
    
+    
 
 }
 
