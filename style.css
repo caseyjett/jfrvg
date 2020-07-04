@@ -17,26 +17,26 @@
     border: 0;
     margin: 0;
     overflow: visible; }
-    .hamburger:hover {
+.hamburger:hover {
       opacity: 0.7; }
-    .hamburger.is-active:hover {
+.hamburger.is-active:hover {
       opacity: 0.7; }
-    .hamburger.is-active .hamburger-inner,
-    .hamburger.is-active .hamburger-inner::before,
-    .hamburger.is-active .hamburger-inner::after {
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
       background-color: #000; }
   
-  .hamburger-box {
+.hamburger-box {
     width: 40px;
     height: 24px;
     display: inline-block;
     position: relative; }
   
-  .hamburger-inner {
+.hamburger-inner {
     display: block;
     top: 50%;
     margin-top: -2px; }
-    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
       width: 40px;
       height: 4px;
       background-color: #000;
@@ -45,31 +45,31 @@
       transition-property: transform;
       transition-duration: 0.15s;
       transition-timing-function: ease; }
-    .hamburger-inner::before, .hamburger-inner::after {
+.hamburger-inner::before, .hamburger-inner::after {
       content: "";
       display: block; }
-    .hamburger-inner::before {
+.hamburger-inner::before {
       top: -10px; }
-    .hamburger-inner::after {
+.hamburger-inner::after {
       bottom: -10px; }
 
-      .hamburger--squeeze .hamburger-inner {
+.hamburger--squeeze .hamburger-inner {
         transition-duration: 0.075s;
         transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-        .hamburger--squeeze .hamburger-inner::before {
+.hamburger--squeeze .hamburger-inner::before {
           transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-        .hamburger--squeeze .hamburger-inner::after {
+.hamburger--squeeze .hamburger-inner::after {
           transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
       
-      .hamburger--squeeze.is-active .hamburger-inner {
+.hamburger--squeeze.is-active .hamburger-inner {
         transform: rotate(45deg);
         transition-delay: 0.12s;
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-        .hamburger--squeeze.is-active .hamburger-inner::before {
+.hamburger--squeeze.is-active .hamburger-inner::before {
           top: 0;
           opacity: 0;
           transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-        .hamburger--squeeze.is-active .hamburger-inner::after {
+.hamburger--squeeze.is-active .hamburger-inner::after {
           bottom: 0;
           transform: rotate(-90deg);
           transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
@@ -103,6 +103,10 @@ nav li a {
 }
 
 /* Buttons  */
+button a {
+    text-decoration: none;
+}
+
 .book-top {
     margin-bottom: 5rem; 
     position: absolute; 
@@ -110,7 +114,8 @@ nav li a {
 
 .book-top, 
 .book-bottom, 
-.about-btn {
+.about-btn, 
+.pricing-btn {
     padding: 1rem 5rem 1rem 2rem;  
     border-radius: 20px; 
 }
@@ -121,32 +126,60 @@ nav li a {
     height: 54px; 
 }
 
-.about-btn a {
-    text-decoration: none;
-    
+.book-bottom {
+    height: 3.375rem; 
+    margin-bottom: 1rem; 
+    color: black; 
+}
+
+/* IMAGES */
+.sectionOneImg {
+    height: 490px; 
+}
+
+.event-type img {
+    display: block; 
+    margin: 0 auto 2rem;  
+    border-radius: 25px; 
+}
+
+.corporate {
+    width: 150px;
+    height: 150px;  
+}
+
+.classroom, 
+.gamerGirls, 
+.gamerBoys {
+    height: 150px; 
+
 }
 /* Page Sections */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     display: flex; 
     flex-direction: row-reverse;
     justify-content: space-around;
-    /* 
-    position: fixed; 
-    width: 100%; */
+    padding: 1rem; 
 }
 
 .sectionOne {
     background-color: var(--kyblue); 
+    display: flex; 
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    /* IF I DO A FULL IMAGE: THESE ARE THE GENERAL STYLES */
     /* background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
     url(images/lituptrailer.jpg);  
     /* background: darkgrey url(images/kidsplaying.jpg) left center/cover no-repeat;  */
     /* background-position: left 40%; 
     background-size: cover; 
     background-repeat: no-repeat;   */
-   
-    display: flex; 
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
 }
 
 .sectionOne h1 {
@@ -156,10 +189,6 @@ header {
     text-align: left; 
     letter-spacing: .09rem;
     color: white; 
-}
-
-.sectionOneImg {
-    height: 490px; 
 }
 
 .sectionTwo {
@@ -188,24 +217,6 @@ header {
     margin: 1rem 1rem 3rem; 
 }
 
-.event-type img {
-    display: block; 
-    margin: 0 auto 2rem;  
-    border-radius: 25px; 
-}
-
-.corporate {
-    width: 150px;
-    height: 150px;  
-}
-
-.classroom, 
-.gamerGirls, 
-.gamerBoys {
-    height: 150px; 
-
-}
-
 .event-type hr {
     margin-top: 1.8rem; 
     width: 150px; 
@@ -227,7 +238,11 @@ header {
     margin: .8rem; 
 }
 
-.sectionThree {
+footer {
+    margin-top: auto; 
+}
+
+.footer-top {
     background-color:var(--red); 
     color: white; 
     margin-bottom: 0;
@@ -237,10 +252,10 @@ header {
     align-items: center;
     justify-content: center; 
     align-items: baseline; 
-    letter-spacing: .09rem;
+    letter-spacing: .09rem; 
 }
 
-.sectionThree h2 {
+.footer-top h2 {
    
     padding: 1rem 1rem 0; 
 }
@@ -248,20 +263,119 @@ header {
 .final-prompt {
     flex-basis: 60%; 
 }
-.book-bottom {
-    height: 3.375rem; 
-    margin-bottom: 1rem; 
-    color: black; 
-}
 
-
-footer {
+.footer-bottom {
     background-color: var(--kyblue); 
     color: white; 
     margin-top: 0; 
     padding: 1.3rem;
     text-align: center; 
 }
+
+/* ABOUT PAGE STYLES */
+.aboutSectionOne {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.aboutSectionOne h1 {
+    margin-left: 1rem; 
+}
+.aboutSectionOne ul {
+    margin-bottom: 3rem; 
+    margin: 0 0 3rem 2rem; 
+}
+.trailer-list{
+    margin: 0 1rem 0 3rem; 
+    list-style-type: disc; 
+    margin-bottom: 1rem; 
+}
+
+.trailer {
+    display: block; 
+    margin: 0 auto; 
+    width: 85%; 
+
+}
+
+/* PRICING PAGE STYLES */
+.pricing-card {
+   text-align: center; 
+}
+
+form {
+    border: 1px solid red; 
+    width: 80%; 
+    display: block; 
+    margin: 0 auto; 
+    padding: 2rem; 
+}
+
+input, 
+select, 
+label { 
+    margin: 1rem; 
+}
+
+.party-length {
+    display: block; 
+    /* margin-left: 20px;  */
+     
+}
+
+select {
+    width: 25%; 
+    margin: 1rem auto; 
+}
+
+/* .hide {
+    display: none; 
+} */
+
+.pricing-btn {
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* CONTACT PAGE STYLES */
+.contact {
+    text-align: center; 
+    margin-top: 2rem; 
+}
+
+.contact-phone {
+    margin-top: 4rem; 
+}
+
+/* GAME LIBRARY PAGE */
+.game-library {
+    margin: 1rem; 
+}
+
+.game-library ul {
+    margin: 2rem; 
+}
+
+.game-library li:first-child {
+    font-weight: 800; 
+}
+
+/* FAQS PAGE */
+.faqs {
+    margin: 2rem 1rem 1rem; 
+
+}
+
+.question {
+    font-weight: 800;
+}
+
+.answer {
+    border-bottom: 1px var(--kyblue) solid; 
+    padding-bottom: .5rem; 
+}
+
+
 
 /* Media Queries */
 @media (min-width: 880px) {
@@ -275,6 +389,10 @@ footer {
         left: auto; 
     } */
 
+    form {
+        width: 50%; 
+    }
+
     .event-type-container {
         display: flex; 
         margin: 2em; 
@@ -284,10 +402,28 @@ footer {
         flex-basis: 24%; 
     }
 
-    .sectionThree {
+    .footer-top {
         padding: 2.4rem; 
         justify-content: space-around;
     }
+
+    /* SUBPAGE RULES */
+    .about-text {
+        width: 55%; 
+    }
+
+    .trailer {
+        width: 40%; 
+    }
+
+    .games-by-console {
+        display: flex; 
+        justify-content: space-around; 
+    }
+
+   .mario {
+       width: 40%; 
+   }
 }
 
 @media (min-width: 992px) {
@@ -298,7 +434,7 @@ footer {
 
     .first-nav-item {
         margin-right: auto; 
-        margin-left: 1rem; 
+        margin-left: 1.5rem; 
     }
 
     .nav-pages {
@@ -318,12 +454,9 @@ footer {
         padding-top: 14rem; 
     }
 
-    .sectionThree h2 {
+    .footer-top h2 {
         padding: 1rem 5rem 1rem 3rem;  
     }
    
-    
-
 }
-
 

@@ -1,1 +1,78 @@
-<p>Testing this out</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body>
+    <header>
+        <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <nav>
+            <ul class="nav-ul">
+                <li class="nav-li first-nav-item"><a href="../index.html"><img src="../images/logoWOnumber.png" alt=""></a></li>
+                <li class="nav-li nav-pages"><a href="about.html">About</a></li>
+                <li class="nav-li nav-pages"><a href="pricing.html">Pricing</a></li>
+                <li class="nav-li nav-pages"><a href="gameLibrary.html">Game Library</a></li>
+                <li class="nav-li nav-pages"><a href="faqs.html">FAQs</a></li>
+                <li class="nav-li nav-pages"><a href="contact.html">Contact</a></li>
+            </ul>      
+        </nav>
+    </header>
+    <main>
+        <section class="pricing-main">
+            <div class="pricing-card">
+                <h2>Events start as low as $199</h2>
+                <p>Fill out the form to be contacted with a personalized quote!</p>
+            </div>
+            <form action="">
+                <div class="form-question">
+                    <label class="hide" for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                </div>
+
+                <div class="form-question">
+                    <label class="hide" for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your Email Address">
+                </div>
+
+                <div class="form-question"></div>
+                    <label class="hide" for="phone-number">Phone Number: </label>
+                    <input type="text" name="phone-number" id="phone-number" placeholder="Your Phone Number">
+                </div>
+
+                <div class="form-question"></div>
+                    <label for="party-length">How many hours would you like access to Mobile Gaming Theater?</label>
+                    <select class="party-length" name="party-length" id="party-length">
+                        <option value="">1 hour</option>
+                        <option value="">2 hours</option>
+                        <option value="">3 hours</option>
+                        <option value="">4 hours</option>
+                        <option value="">5+ hours</option>
+                    </select>
+                </div>
+
+            
+                <button class="pricing-btn">Submit</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-top">
+            <h2 class="final-prompt">Plan your next party with Jett Fast Rolling Video Games today!</h2>
+            <button class="book-bottom"><a href="https://calender.rollingvideogames.com/bookNowExternal.php?oid=270&state=KY&zip=40310">Book now!</a></button>
+        </div>
+        <div class="footer-bottom">&copy; 2020 Jett Fast Rolling Video Games.</div>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
