@@ -159,6 +159,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--kyblue);
 }
 
 header {
@@ -314,14 +315,21 @@ form {
 input, 
 select, 
 label { 
-    margin: 1rem; 
+    margin: 1rem .5rem;
+    border-radius: 5px;  
+
 }
 
-.party-length {
+input, 
+select {
+    border: 1.5px var(--kyblue) solid; 
+}
+
+/* .party-length {
     display: block; 
     /* margin-left: 20px;  */
      
-}
+} */
 
 select {
     width: 25%; 
