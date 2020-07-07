@@ -228,6 +228,10 @@ header {
     text-align: center; 
 }
 
+.videoHeading {
+    display: none; 
+}
+
 .sectionVideos {
     display: flex; 
     flex-wrap: wrap; 
@@ -327,9 +331,10 @@ select {
 
 /* .party-length {
     display: block; 
-    /* margin-left: 20px;  */
-     
+    /* margin-left: 20px;  
 } */
+     
+
 
 select {
     width: 25%; 
