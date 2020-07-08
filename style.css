@@ -81,6 +81,9 @@
     --red: #e51b24; 
 }
 
+* {
+    box-sizing: border-box;
+}
 /* Navigation Things */
 .nav-li {
     list-style-type: none;
@@ -312,7 +315,7 @@ form {
     border: 1px solid red; 
     width: 80%; 
     display: block; 
-    margin: 0 auto; 
+    margin: 0 auto 3rem; 
     padding: 2rem; 
 }
 
@@ -329,17 +332,20 @@ select {
     border: 1.5px var(--kyblue) solid; 
 }
 
+input {
+    padding: .4rem 4rem .4rem .2rem; 
+}
+
+select {
+    padding: .4rem 0; 
+    width: 250px; 
+    /* margin: 1rem auto;  */
+}
+
 /* .party-length {
     display: block; 
     /* margin-left: 20px;  
 } */
-     
-
-
-select {
-    width: 25%; 
-    margin: 1rem auto; 
-}
 
 /* .hide {
     display: none; 
@@ -404,6 +410,7 @@ select {
 
     form {
         width: 50%; 
+        
     }
 
     .event-type-container {
